@@ -1,0 +1,17 @@
+/target
+*~
+**/*.rs.bk
+.idea
+*.iml
+mandel.png
+docs/ltximg
+*.html
+*/logs
+**/logs
+flamegraph.svg
+perf.data
+**/all.json
+**/timeline_files
+**/*.bkp
+**/*.dtmp
+logs
