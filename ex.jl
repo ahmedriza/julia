@@ -1,3 +1,4 @@
+#!/usr/local/bin/julia
 using Arrow
 using DataFrames
 using StatsPlots:bar
@@ -30,11 +31,18 @@ function test()
 end
 
 function arrow_test()
-    table = Arrow.Table("/tmp/arrow.ipc")
+    # table = Arrow.Table("/tmp/arrow.ipc")
     # display(table[1])
     # create a DataFrame from the table
-    df = DataFrame(table)
-    display(df)
+    # df = DataFrame(table)
+    # display(df)
+    df = DataFrame()
+    df[!, "col1"] = zeros(Float64, 10)
+    # save to Arrow format
+    Arrow.write("/tmp/julia_df.arrow", df)
+    # load into Arrow table
+    table = Arrow.Table("/tmp/julia_df.arrow")
+    display(table[:col1])
 end
 
 # https://probability4datascience.com/python01.html
@@ -61,7 +69,7 @@ end
 
 # test_manddelbrot()
 # test()
-# arrow_test()
+arrow_test()
 # de()
-geometric_series()
+# geometric_series()
 

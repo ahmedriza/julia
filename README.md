@@ -45,6 +45,18 @@ If LSP integration is needed add the following to emacs init.
 (add-hook 'julia-mode-hook #'lsp-mode)
 ```
 
+# Jupyter
+
+Start up Julia and then
+
+```
+using IJulia
+notebook()
+```
+
+This will open a jupyter notebook where Julia interpreter can be started.
+See https://github.com/JuliaLang/IJulia.jl#quick-start
+
 # References
 
 * https://hershsingh.net/blog/emacs-julia/
