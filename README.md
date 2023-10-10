@@ -61,3 +61,4 @@ See https://github.com/JuliaLang/IJulia.jl#quick-start
 
 * https://hershsingh.net/blog/emacs-julia/
 * https://probability4datascience.com/
+* https://sciml.ai/
