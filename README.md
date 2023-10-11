@@ -47,11 +47,18 @@ If LSP integration is needed add the following to emacs init.
 
 # Jupyter
 
-Start up Julia and then
+From julia
 
 ```
 using IJulia
 notebook()
+```
+
+From standalone jupyter.  Make sure jupyter is installed 
+```
+brew update
+brew install jupyterlab
+jupyter lab 
 ```
 
 This will open a jupyter notebook where Julia interpreter can be started.
